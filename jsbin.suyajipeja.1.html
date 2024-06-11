@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2024 by anonymous (http://jsbin.com/suyajipeja/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oda Ayrıntıları</title>
+    <link rel="stylesheet" href="styles.css">
+<style id="jsbin-css">
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Gece rengi ve opaklık */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Gölgelendirme */
+}
+
+.room-info {
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    background-color: #FFC5C5; /* Pembe renk */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons {
+    margin-bottom: 20px;
+}
+
+.message-btn, .question-btn {
+    background-color: #FFC5C5; /* Pembe renk */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.blue-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.blue-bg::before {
+      content: "";
+      background-image: url('https://picsum.photos/200/300'); /* Bulanık arka plan resmi */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      filter: blur(10px); /* Bulanıklık efekti */
+      z-index: -1; /* Arkada kalması için */
+      opacity: 0.8; /* Bulanıklık seviyesi */
+}
+</style>
+</head>
+<body>
+    <div class="blur-bg"></div>
+    <div class="modal-overlay">
+        <div class="modal">
+            <h2>Oda Ayrıntıları</h2>
+            <div class="host-info">
+                <div class="profile-pic">&#129504;</div> <!-- Yumurta kafa emoji -->
+                <div class="host-details">
+                    <p><strong>Ev Sahibi:</strong> John Doe</p>
+                    <p><strong>Mevki:</strong> İstanbul</p>
+                    <p><strong>Email:</strong> <a href="mailto:john@example.com">john@example.com</a></p>
+                </div>
+            </div>
+            <div class="room-info">
+                <p><strong>Oda büyüklüğü:</strong> 20 m<sup>2</sup></p>
+                <p><strong>Fiyat:</strong> ₺500/ay</p>
+            </div>
+            <div class="host-extras">
+                <h3>Ev sahibi tarafından sağlanan ekstralar</h3>
+                <ul>
+                    <li>Ücretsiz Wi-Fi</li>
+                    <li>24/7 Güvenlik</li>
+                    <li>Çamaşır/Bulaşık servisleri</li>
+                </ul>
+            </div>
+            <div class="buttons">
+                <button class="message-btn">Mesaj Gönder</button>
+                <button class="question-btn">Soru Sor</button>
+            </div>
+            <button class="close-btn">Kpat</button>
+        </div>
+    </div>
+</body>
+</html>
